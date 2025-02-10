@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Exo2";
+    font-weight: 700;
+    src: url('../assets/fonts/woff/Exo2-Bold.woff') format("woff"),
+        url('../assets/fonts/woff2/Exo2-Bold.woff') format("woff2"),
+}
+
+@font-face {
+    font-family: "Exo2";
+    font-weight: 600;
+    src: url('../assets/fonts/woff/Exo2-SemiBold.woff') format("woff"),
+        url('../assets/fonts/woff2/Exo2-SemiBold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 700;
+    src: url('../assets/fonts/woff/NanumSquareB.woff') format("woff"),
+        url('../assets/fonts/woff2/NanumSquareB.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 500;
+    src: url('../assets/fonts/woff/NanumSquareR.woff') format("woff"),
+        url('../assets/fonts/woff2/NanumSquareR.woff2') format("woff2");
+}
+
+:root {
+    --main-color : #1C1D22;
+
+}
+
+//s. App
+.App {
+    display: flex;
+    height: 100vh;
+}
+//e. App
+
+//s. NavBar
+.NavBar {
+    width: 90px;
+    height: 100%;
+    padding: 33px 0;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.NavBar li {
+    cursor: pointer;
+}
+
+.NavBar li + li {
+    margin-top: 45px;
+}
+
+.NavBar img {
+    width: 30px;
+}
+//e. NavBar
+
+//s. Menu
+.Menu {
+    width: 318px;
+    height: 100%;
+    padding: 32px 28px 0;
+}
+
+.Menu .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.Menu .title h2 {
+    font-size: 1.875rem;
+    color: #1c1d22;
+    font-weight: 600;
+}
+
+.Menu li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Menu li + li {
+    margin-top: 28px;
+}
+
+.Menu li h3 {
+    font-weight: 600;
+    color: rgba(28, 29, 34, 50%);
+}
+
+.Menu li img:last-child {
+    margin-left: auto;
+}
+//e. Menu
+
+
+//s. Todo
+.todo {
+    width: 100%;
+    margin-top: 29px;
+    padding: 0 32px;
+}
+
+.todo .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo .header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1C1D22;
+}
+
+.todo .header div {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.todo .header p {
+    color: rgba(28, 29, 34, 50%);
+    font-weight: 500;
+}
+
+.todo .header p > img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.todo .todo_add {
+    margin-top: 51px;
+}
+
+.todo .todo_add h3 {
+    font-size: 0.9375rem;
+    color: #82869E;
+    font-weight: 600;
+}
+
+.todo .todo_add input {
+    margin-top: 19px;
+    background-color: rgba(28, 29, 34, 4%);
+    border: none;
+    padding: 16px;
+    width: 100%;
+    max-width: 638px;
+    margin-right: 8px;
+}
+
+.todo .todo_add button {
+    color: #fff;
+    background-color: #007AFF;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 16px 16px;
+    font-size: 0.875rem;
+}
+
+.todo .todo_list_wrapper {
+    margin-top: 41px;
+}
+
+.todo .todo_list_wrapper .filtered_todos {
+    max-width: 704px;
+    width: 100%;
+    border-bottom: 2px solid rgba(28, 29, 34, 8%)
+}
+
+.todo .todo_list_wrapper .filtered_todos button {
+    background: none;
+    padding: 10px 50px;
+    font-weight: 600;
+    color: rgba(28, 29, 34, 50%);
+}
+
+.todo .todo_list_wrapper .filtered_todos button:focus {
+    color: #1C1D22;
+    border-bottom: 2px solid #1C1D22;
+}
+
+.todo .todo_list_wrapper .todo_list {
+    max-width: 704px;
+    text-align: center;
+    padding: 57px 200px;
+}
+
+.todo .todo_list_wrapper .todo_list p{
+    font-weight: 600;
+    color: #808080;
+    line-height: 1.4;
+}
+
+//e. Todo
