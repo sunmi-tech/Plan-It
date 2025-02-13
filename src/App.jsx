@@ -2,7 +2,6 @@ import './styles/global.scss'
 import './styles/reset.scss'
 import NavBar from './components/Navbar'
 import Menu from './components/Menu'
-import Header from './components/Header'
 import { Routes, Route } from 'react-router-dom'
 import Todo from './pages/Todo'
 import Month from './pages/Month'
@@ -14,7 +13,6 @@ function App() {
     <div className='App'>
       <NavBar></NavBar>
       <Menu></Menu>
-      <Header></Header>
       <Routes>
         <Route path='/' element={<Dashboard></Dashboard>}></Route>
         <Route path='/todo' element={<Todo></Todo>}></Route>

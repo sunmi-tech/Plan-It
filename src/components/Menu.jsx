@@ -1,35 +1,32 @@
 import circle_plus from "../assets/images/circle_plus.svg";
-import arrow from "../assets/images/arrow.svg";
-import plus from "../assets/images/plus.svg";
+import AddMenu from "./AddMenu";
+import { useState } from "react";
 
 function Menu() {
+  let [addMenu, setAddMenu] = useState([]);
   return (
     <div className="Menu">
       <div className="title">
-        <h2>Projects</h2>
-        <img src={circle_plus} />
+        <h2>TODOS</h2>
+        {/*
+            addmenu 제목 바꿔야함
+        */}
+        <button
+          onClick={() => {
+            setAddMenu([...addMenu, '']);
+          }}
+        >
+          <img src={circle_plus} />
+        </button>
       </div>
       <ul>
-        <li>
-            <img src={arrow} />
-            <h3>Team</h3>
-            <img src={plus} />
-        </li>
-        <li>
-            <img src={arrow} />
-            <h3>Tasks</h3>
-            <img src={plus} />
-        </li>
-        <li>
-          <img src={arrow} />
-          <h3>Reminders</h3>
-          <img src={plus} />
-        </li>
-        <li>
-          <img src={arrow} />
-          <h3>Messengers</h3>
-          <img src={plus} />
-        </li>
+        {
+          addMenu.map((item, index) => {
+            return (
+              <AddMenu key={index}></AddMenu>
+            )
+          })
+        }
       </ul>
     </div>
   );
