@@ -12,12 +12,29 @@ function App() {
   return (
     <div className='App'>
       <NavBar></NavBar>
-      <Menu></Menu>
       <Routes>
         <Route path='/' element={<Dashboard></Dashboard>}></Route>
-        <Route path='/todo' element={<Todo></Todo>}></Route>
-        <Route path='/month' element={<Month></Month>}></Route>
-        <Route path='/note' element={<Note></Note>}></Route>
+        <Route path='/todo/:id?' element={
+          <>
+          <Menu menuType="todo"></Menu>
+          <Todo></Todo>
+          </>
+          }>
+        </Route>
+        <Route path='/month/:id?' element={
+          <>
+          <Menu menuType="month"></Menu>
+          <Month></Month>
+          </>
+          }>
+        </Route>
+        <Route path='/note/:id?' element={
+          <>
+          <Menu menuType='note'></Menu>
+          <Note></Note>
+          </>
+          }>
+        </Route>
       </Routes>
     </div>
   )

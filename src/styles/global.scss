@@ -104,6 +104,18 @@
     margin-top: 28px;
 }
 
+.Menu .top_menu input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(28, 29, 34, 4%);
+    color: rgba(28, 29, 34, 50%);
+}
+
+.Menu .top_menu input:focus {
+    outline: none;
+}
+
 .Menu .top_menu h3 {
     font-weight: 600;
     color: rgba(28, 29, 34, 50%);
@@ -119,18 +131,35 @@
 
 .Menu .sub_menu {
     margin: 14px 0 20px;
-    padding-left: 20px;
 }
 
-.Menu .sub_menu > li {
+.Menu .sub_menu li + li {
+    margin-top: 15px;
+}
+
+.Menu .sub_menu input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9375rem;
+    background-color: rgba(28, 29, 34, 4%);
+    color: rgba(28, 29, 34, 50%);
+}
+
+.Menu .sub_menu input:focus {
+    outline: none;
+}
+
+.Menu .sub_menu h3 {
     max-width: 131px;
     font-weight: 600;
     color: rgba(28, 29, 34, 30%);
     cursor: pointer;
     padding: 10px 18px;
+    font-size: 0.9375rem;
 }
 
-.Menu .sub_menu li:hover {
+.Menu .sub_menu h3:hover {
     border-radius: 50px;
     background-color: rgba(28, 29, 34, 4%);
     color: #1C1D22;
@@ -141,12 +170,6 @@
     background-color: rgba(28, 29, 34, 4%);
     color: #1C1D22;
 }
-
-.Menu .sub_menu li + li {
-    margin-top: 15px;
-}
-
-
 //e. 
 
 //s. Todo
@@ -156,32 +179,38 @@
     padding: 0 32px;
 }
 
-.todo .header {
+.header_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.todo .header h2 {
+.header_container h2 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #1C1D22;
 }
 
-.todo .header div {
+.header_container div {
     display: flex;
     align-items: center;
     gap: 23px;
 }
 
-.todo .header p {
+.header_container p {
     color: rgba(28, 29, 34, 50%);
     font-weight: 500;
 }
 
-.todo .header p > img {
+.todo .header_container p > img {
     vertical-align: middle;
     margin-right: 5px;
+}
+
+.todo .header_container label > img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
 }
 
 .todo .todo_add {

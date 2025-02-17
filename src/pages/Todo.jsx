@@ -1,22 +1,10 @@
 import todo_add from "../assets/images/todo_add.svg";
-import search from "../assets/images/search.svg";
-import calendar from "../assets/images/calendar.svg";
-import profile from "../assets/images/profile.svg";
-
+import Header from "../components/Header";
 function Todo() {
   return (
+    <>
     <div className="todo">
-      <div className="header">
-        <h2>Welcome back, Vincent 👍</h2>
-        <div>
-          <img src={search} />
-          <p>
-            <img src={calendar} />
-            <span>19 May 2025</span>
-          </p>
-          <img src={profile} />
-        </div>
-      </div>
+      <Header></Header>
       <div className="todo_add">
         <h3>TODAY TASK</h3>
         <input type="text" placeholder="오늘의 할일을 입력해주세요!" />
@@ -37,6 +25,7 @@ function Todo() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

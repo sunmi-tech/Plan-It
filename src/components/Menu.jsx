@@ -2,15 +2,22 @@ import circle_plus from "../assets/images/circle_plus.svg";
 import AddMenu from "./AddMenu";
 import { useState } from "react";
 
-function Menu() {
+function Menu({menuType}) {
+  
+  let menuText;
+  if(menuType === 'todo'){
+    menuText = 'TODOS';
+  } else if (menuType === 'month'){
+    menuText = 'MONTH'
+  } else if (menuType === 'note'){
+    menuText = 'NOTE'
+  }
+
   let [addMenu, setAddMenu] = useState([]);
   return (
     <div className="Menu">
       <div className="title">
-        <h2>TODOS</h2>
-        {/*
-            addmenu 제목 바꿔야함
-        */}
+        <h2>{menuText}</h2>
         <button
           onClick={() => {
             setAddMenu([...addMenu, '']);
@@ -23,7 +30,7 @@ function Menu() {
         {
           addMenu.map((item, index) => {
             return (
-              <AddMenu key={index}></AddMenu>
+              <AddMenu menuType={menuType} key={index}></AddMenu>
             )
           })
         }
