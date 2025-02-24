@@ -215,6 +215,8 @@
 
 .todo .todo_add {
     margin-top: 51px;
+    width: 100%;
+    white-space: nowrap;
 }
 
 .todo .todo_add h3 {
@@ -233,6 +235,10 @@
     margin-right: 8px;
 }
 
+.todo .todo_add input:focus {
+    outline: none;
+}
+
 .todo .todo_add button {
     color: #fff;
     background-color: #007AFF;
@@ -246,34 +252,63 @@
     margin-top: 41px;
 }
 
-.todo .todo_list_wrapper .filtered_todos {
-    max-width: 704px;
-    width: 100%;
-    border-bottom: 2px solid rgba(28, 29, 34, 8%)
-}
-
-.todo .todo_list_wrapper .filtered_todos button {
-    background: none;
-    padding: 10px 50px;
-    font-weight: 600;
-    color: rgba(28, 29, 34, 50%);
-}
-
-.todo .todo_list_wrapper .filtered_todos button:focus {
-    color: #1C1D22;
-    border-bottom: 2px solid #1C1D22;
-}
-
-.todo .todo_list_wrapper .todo_list {
+.todo .todo_list_wrapper .empty_todo {
     max-width: 704px;
     text-align: center;
     padding: 57px 200px;
 }
 
-.todo .todo_list_wrapper .todo_list p{
+.todo .todo_list_wrapper .empty_todo p{
     font-weight: 600;
     color: #808080;
     line-height: 1.4;
+    white-space: nowrap;
 }
 
+.todo .todo_list_wrapper .todo_list {
+    width: 100%;
+    max-width: 736px;
+    margin-top: 28px;
+}
+
+.todo .todo_list_wrapper .todo_list li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo .todo_list_wrapper .todo_list li + li {
+    margin-top: 24px;
+}
+
+.todo .todo_list_wrapper .todo_list label{
+    width: 100%;
+}
+
+.todo .todo_list_wrapper .todo_list label img{
+    vertical-align: middle;
+}
+
+.todo .todo_list_wrapper .todo_list input[type='checkbox']{
+    display: none;
+}
+
+.todo .todo_list_wrapper .todo_list .checked{
+    text-decoration: line-through;
+    color: #B5B5BA;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+}
+
+.todo .todo_list_wrapper .todo_list span{
+    margin-left: 10px;
+    color: #413F3F;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.todo .todo_list_wrapper .todo_list button {
+    vertical-align: middle;
+    margin-left: auto;
+}
 //e. Todo
